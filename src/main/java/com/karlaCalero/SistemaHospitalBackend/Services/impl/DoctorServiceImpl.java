@@ -4,6 +4,7 @@ import com.karlaCalero.SistemaHospitalBackend.Model.Doctor;
 import com.karlaCalero.SistemaHospitalBackend.Repository.DoctorRepository;
 import com.karlaCalero.SistemaHospitalBackend.Services.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

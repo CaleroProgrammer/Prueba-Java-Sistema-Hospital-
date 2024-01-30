@@ -1,5 +1,5 @@
 package com.karlaCalero.SistemaHospitalBackend.Controller;
-import com.karlaCalero.SistemaHospitalBackend.Model.Persona;
+import com.karlaCalero.SistemaHospitalBackend.Model.Paciente;
 import com.karlaCalero.SistemaHospitalBackend.Services.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ public class PacienteRest {
     @GetMapping("/pacientes")
     public ResponseEntity<?> consultarPacientes(){
         try{
-            List<Persona>pacientes=pacienteService.getPacientes();
+            List<Paciente>pacientes=pacienteService.getPacientes();
             return ResponseEntity.ok(pacientes.toString());
         }
         catch (Exception e){

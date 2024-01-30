@@ -1,8 +1,8 @@
 package com.karlaCalero.SistemaHospitalBackend.Services.impl;
 
-import com.karlaCalero.SistemaHospitalBackend.Model.Doctor;
-import com.karlaCalero.SistemaHospitalBackend.Model.Persona;
-import com.karlaCalero.SistemaHospitalBackend.Repository.DoctorRepository;
+
+import com.karlaCalero.SistemaHospitalBackend.Model.Paciente;
+
 import com.karlaCalero.SistemaHospitalBackend.Repository.PacienteRepository;
 import com.karlaCalero.SistemaHospitalBackend.Services.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ public class PacienteServiceImpl implements PacienteService {
     PacienteRepository pacienteRepository;
 
     @Override
-    public List<Persona> getPacientes(){
+    public List<Paciente> getPacientes(){
         return pacienteRepository.findAll();
     }
 }

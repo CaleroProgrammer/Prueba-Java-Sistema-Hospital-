@@ -20,8 +20,8 @@ public class DoctorRest {
     @GetMapping("/doctores")
     public ResponseEntity<?> consultarDoctores(){
         try{
-            List<Doctor> doctores=doctorService.getDoctores();
-            return ResponseEntity.ok(doctores.toString());
+            System.out.println(doctorService.getDoctores());
+            return ResponseEntity.ok(doctorService.getDoctores().toString());
         }
         catch (Exception e){
             return ResponseEntity.status(500).body("Hubo un problema al consultar la información. Intente más tarde.");

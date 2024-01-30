@@ -6,32 +6,29 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name="doctor")
-public class Doctor extends Persona {
+@Table(name="paciente")
+public class Paciente extends Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String especialidad;
 
-    public Doctor(String nombre, String apellidoPaterno, String apellidoMaterno, String especialidad) {
+    public Paciente(String nombre, String apellidoPaterno, String apellidoMaterno) {
         this.setNombre(nombre);
         this.setApellidoPaterno(apellidoPaterno);
         this.setApellidoMaterno(apellidoMaterno);
-        this.especialidad = especialidad;
     }
 
-    public Doctor() {
+    public Paciente() {
 
     }
 
     @Override
     public String toString() {
-        return "Doctor{" +
+        return "Paciente{" +
                 "id=" + id +
                 ", nombre="+this.getNombre()+
                 ", apellidoPaterno="+this.getApellidoPaterno()+
                 ", apellidoMaterno="+this.getApellidoMaterno()+
-                ", especialidad='" + especialidad + '\'' +
                 '}';
     }
 }
